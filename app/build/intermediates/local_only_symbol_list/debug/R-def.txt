@@ -10,7 +10,7 @@ color white
 dimen fab_margin
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-drawable ooush_logotype
+drawable ooush_logo
 id FirstFragment
 id SecondFragment
 id action_FirstFragment_to_SecondFragment

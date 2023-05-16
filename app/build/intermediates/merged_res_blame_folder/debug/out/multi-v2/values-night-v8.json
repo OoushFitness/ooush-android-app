@@ -4,25 +4,6 @@
             "outputFile": "com.example.ooushfitness.app-mergeDebugResources-35:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/alexgreen/Repos/OoushFitness/app/src/main/res/values-night/themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "100",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "801"
-                    },
-                    "to": {
-                        "startLines": "33",
-                        "startColumns": "4",
-                        "startOffsets": "3341",
-                        "endLines": "45",
-                        "endColumns": "12",
-                        "endOffsets": "3921"
-                    }
-                },
-                {
                     "source": "/Users/alexgreen/.gradle/caches/transforms-3/54e31f977100d6447280343f2dd4c98e/transformed/appcompat-1.4.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -54,6 +35,25 @@
                         "startOffsets": "687,762,873,962,1063,1170,1277,1376,1479,1567,1691,1793,1895,2011,2113,2227,2355,2471,2593,2729,2849,2983,3103,3215,4015,4132,4256,4386,4508,4646,4780,4896",
                         "endColumns": "74,110,88,100,106,106,98,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "757,868,957,1058,1165,1272,1371,1474,1562,1686,1788,1890,2006,2108,2222,2350,2466,2588,2724,2844,2978,3098,3210,3336,4127,4251,4381,4503,4641,4775,4891,5011"
+                    }
+                },
+                {
+                    "source": "/Users/alexgreen/Ooush/ooush-android-app/app/src/main/res/values-night/themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "801"
+                    },
+                    "to": {
+                        "startLines": "33",
+                        "startColumns": "4",
+                        "startOffsets": "3341",
+                        "endLines": "45",
+                        "endColumns": "12",
+                        "endOffsets": "3921"
                     }
                 }
             ]

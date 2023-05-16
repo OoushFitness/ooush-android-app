@@ -4,7 +4,7 @@
             "outputFile": "com.example.ooushfitness.app-mergeDebugResources-35:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/alexgreen/Repos/OoushFitness/app/src/main/res/values-w600dp/dimens.xml",
+                    "source": "/Users/alexgreen/Ooush/ooush-android-app/app/src/main/res/values-w600dp/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

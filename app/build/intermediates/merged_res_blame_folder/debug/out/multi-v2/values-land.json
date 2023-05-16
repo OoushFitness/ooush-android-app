@@ -4,7 +4,7 @@
             "outputFile": "com.example.ooushfitness.app-mergeDebugResources-35:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/alexgreen/Repos/OoushFitness/app/src/main/res/values-land/dimens.xml",
+                    "source": "/Users/alexgreen/Ooush/ooush-android-app/app/src/main/res/values-land/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

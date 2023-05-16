@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
 MERGED from [androidx.databinding:viewbinding:7.4.1] /Users/alexgreen/.gradle/caches/transforms-3/116db3d9efd249bff786bb533726107f/transformed/viewbinding-7.4.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.4.1] /Users/alexgreen/.gradle/caches/transforms-3/5dab4a12f30c2d6525aa7ed02e617eac/transformed/navigation-fragment-ktx-2.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.4.1] /Users/alexgreen/.gradle/caches/transforms-3/f8139e2a8303be0854cb51aa8a8e2033/transformed/navigation-fragment-2.4.1/AndroidManifest.xml:17:1-24:12
@@ -61,27 +61,27 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/alexgreen/.gradle/
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/alexgreen/.gradle/caches/transforms-3/3dac3c555a009f19ad2bc626d96ade9b/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/alexgreen/.gradle/caches/transforms-3/f4968768adee87c4c6c87280eb34bf46/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/alexgreen/.gradle/caches/transforms-3/7ba1a1485512c0202103b5247d3a60cc/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
 	package
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:3:11-57
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:3:11-57
 	android:versionCode
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:1-27:12
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:1-27:12
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:5:5-25:19
+ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:5:5-25:19
 MERGED from [androidx.window:window:1.0.0] /Users/alexgreen/.gradle/caches/transforms-3/2583efbc42003ff80e01466bf2f32ea1/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0] /Users/alexgreen/.gradle/caches/transforms-3/2583efbc42003ff80e01466bf2f32ea1/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.android.material:material:1.5.0] /Users/alexgreen/.gradle/caches/transforms-3/0c6a9f25ae3fed175f9452e340fb4219/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
@@ -101,45 +101,45 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/alexgreen/.gradle/ca
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] /Users/alexgreen/.gradle/caches/transforms-3/6863554b5934014f8e380f5ea3e03757/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:11:13-39
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:11:13-39
 	android:label
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:10:13-45
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:10:13-45
 	android:fullBackupContent
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:8:13-58
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:8:13-58
 	tools:targetApi
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:13:13-33
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:13:13-33
 	android:icon
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:9:13-47
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:9:13-47
 	android:allowBackup
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:6:13-39
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:6:13-39
 	android:theme
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:12:13-54
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:12:13-54
 	android:dataExtractionRules
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:7:13-69
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:7:13-69
 activity#com.example.ooushfitness.MainActivity
-ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:14:9-24:20
+ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:14:9-24:20
 	android:label
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:17:17-49
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:17:17-49
 	android:exported
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:16:17-40
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:16:17-40
 	android:theme
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:18:17-70
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:18:17-70
 	android:name
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:15:17-45
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:15:17-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:19:13-23:29
+ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:20:17-68
+ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:20:17-68
 	android:name
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:22:17-76
+ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:22:17-76
 	android:name
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml:22:27-74
 uses-sdk
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:7.4.1] /Users/alexgreen/.gradle/caches/transforms-3/116db3d9efd249bff786bb533726107f/transformed/viewbinding-7.4.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:7.4.1] /Users/alexgreen/.gradle/caches/transforms-3/116db3d9efd249bff786bb533726107f/transformed/viewbinding-7.4.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.4.1] /Users/alexgreen/.gradle/caches/transforms-3/5dab4a12f30c2d6525aa7ed02e617eac/transformed/navigation-fragment-ktx-2.4.1/AndroidManifest.xml:20:5-22:41
@@ -254,16 +254,16 @@ MERGED from [androidx.print:print:1.0.0] /Users/alexgreen/.gradle/caches/transfo
 MERGED from [androidx.print:print:1.0.0] /Users/alexgreen/.gradle/caches/transforms-3/f4968768adee87c4c6c87280eb34bf46/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/alexgreen/.gradle/caches/transforms-3/7ba1a1485512c0202103b5247d3a60cc/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/alexgreen/.gradle/caches/transforms-3/7ba1a1485512c0202103b5247d3a60cc/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-		ADDED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/alexgreen/Repos/OoushFitness/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+		ADDED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgreen/Ooush/ooush-android-app/app/src/main/AndroidManifest.xml
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0] /Users/alexgreen/.gradle/caches/transforms-3/2583efbc42003ff80e01466bf2f32ea1/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
 	android:required
