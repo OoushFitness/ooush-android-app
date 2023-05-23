@@ -13,5 +13,4 @@
 .idea/navEditor.xml
 .gradle/7.5/fileHashes/fileHashes.lock
 .idea/modules/OoushFitness.iml
-.idea/workspace.xml
-.idea/workspace.xml
+app/build/**
