@@ -18,7 +18,8 @@
                 android:layout_width="match_parent"
                 android:theme="@style/Theme.OoushFitness.AppBarOverlay"
                 android:layout_height="match_parent"
-                app:titleTextColor="@color/ooush_highlight_text"><
+                app:titleTextColor="@color/ooush_highlight_text">
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
