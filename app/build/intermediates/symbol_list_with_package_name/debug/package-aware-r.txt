@@ -71,6 +71,10 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr SharedValue
 attr SharedValueId
 attr action
@@ -1786,6 +1790,15 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color ooush_accent
+color ooush_background
+color ooush_complimentary
+color ooush_dashboard_card
+color ooush_highlight_text
+color ooush_input_focus
+color ooush_primary
+color ooush_primary_hover
+color ooush_secondary
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2554,6 +2567,14 @@ drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font archivo_narrow
+font bellota_text_light
+font bungee_hairline
+font coda
+font encode_sans_thin
+font montserrat_extralight
+font montserrat_light
+font syncopate
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2620,6 +2641,7 @@ id action_container
 id action_context_bar
 id action_divider
 id action_image
+id action_logout
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -2640,6 +2662,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appBarLayout
 id arc
 id asConfigured
 id async
@@ -2743,7 +2766,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fade
 id fill
 id fill_horizontal
@@ -3283,6 +3305,7 @@ string hello_second_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string logout
 string m3_ref_typeface_brand_display_regular
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
