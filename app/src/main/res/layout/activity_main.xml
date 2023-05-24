@@ -17,8 +17,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:theme="@style/Theme.OoushFitness.AppBarOverlay"
-                android:layout_height="match_parent"
-                app:titleTextColor="@color/ooush_highlight_text">
+                android:layout_height="match_parent">
             <RelativeLayout android:layout_width="50dp" android:layout_height="match_parent">
                 <ImageView
                         android:layout_width="50dp"
