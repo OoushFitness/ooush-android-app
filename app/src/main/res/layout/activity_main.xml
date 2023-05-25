@@ -20,8 +20,10 @@
                 android:layout_height="match_parent">
             <RelativeLayout android:layout_width="50dp" android:layout_height="match_parent">
                 <ImageView
+                        app:srcCompat="@drawable/ooush_logo"
                         android:layout_width="50dp"
-                        android:layout_height="50dp" app:srcCompat="@drawable/ooush_logo"
+                        android:layout_height="50dp"
+                        android:contentDescription="@string/logo_content_description"
                         android:id="@+id/imageView"/>
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>

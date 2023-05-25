@@ -11,6 +11,6 @@
 .idea/modules.xml
 # Comment next line if keeping position of elements in Navigation Editor is relevant for you
 .idea/navEditor.xml
-.gradle/7.5/fileHashes/fileHashes.lock
+.gradle/
 .idea/modules/OoushFitness.iml
 app/build/**
