@@ -7,26 +7,56 @@
         android:layout_height="match_parent"
         tools:context=".FirstFragment">
 
-    <TextView
-            android:id="@+id/textview_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hello_first_fragment"
-            android:fontFamily="@font/archivo_narrow"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_first"
-            app:layout_constraintHorizontal_bias="0.498"/>
-    <Button
-            android:id="@+id/button_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next"
-            android:fontFamily="@font/archivo_narrow"
-            app:layout_constraintTop_toBottomOf="@id/textview_first"
+    <EditText
+            android:layout_width="350dp"
+            android:layout_height="67dp"
+            android:inputType="textEmailAddress"
+            android:hint="@string/enter_username"
+            android:fontFamily="@font/montserrat_light"
+            android:textAlignment="center"
+            android:ems="10"
+            android:id="@+id/editTextTextEmailAddress"
+            android:background="@drawable/input_background"
+            android:textColor="@color/ooush_highlight_text"
+            android:textColorHint="@color/ooush_highlight_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"/>
+            app:layout_constraintHorizontal_bias="0.497"
+            android:layout_marginBottom="572dp"
+            android:autofillHints="Enter Username" />
+
+    <EditText
+            android:layout_width="350dp"
+            android:layout_height="67dp"
+            android:inputType="textPassword"
+            android:hint="@string/enter_password"
+            android:fontFamily="@font/montserrat_light"
+            android:textAlignment="center"
+            android:ems="10"
+            android:id="@+id/editTextTextPassword"
+            android:background="@drawable/input_background"
+            android:textColor="@color/ooush_highlight_text"
+            android:textColorHint="@color/ooush_highlight_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            android:layout_marginBottom="472dp"
+            android:autofillHints="Enter Password" />
+
+    <Button
+            android:id="@+id/button_first"
+            android:layout_width="243dp"
+            android:layout_height="67dp"
+            android:text="@string/login"
+            android:fontFamily="@font/montserrat_light"
+            android:textSize="20sp"
+            android:background="@drawable/button_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            android:layout_marginBottom="352dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
