@@ -1,4 +1,4 @@
-package com.example.ooushfitness
+package com.example.ooushfitness.activity
 
 import android.os.Bundle
 import android.view.Menu
@@ -8,7 +8,12 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.ooushfitness.R
 import com.example.ooushfitness.databinding.ActivityMainBinding
+import com.example.ooushfitness.http.LoginService
+import com.example.ooushfitness.http.TestService
+import com.example.ooushfitness.http.retrofit.RetrofitBuilder
+import retrofit2.Retrofit
 
 class MainActivity : AppCompatActivity() {
 
