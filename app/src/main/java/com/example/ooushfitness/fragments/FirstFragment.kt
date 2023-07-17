@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.ooushfitness.databinding.FragmentFirstBinding
+import com.example.ooushfitness.dto.request.LoginRequest
+import com.example.ooushfitness.dto.response.LoginResponse
 import com.example.ooushfitness.http.TestService
 import com.example.ooushfitness.http.retrofit.RetrofitBuilder
 import okhttp3.ResponseBody
@@ -41,18 +43,24 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFirst.setOnClickListener {
-            testService.getTest().enqueue(object : Callback<ResponseBody> {
-                override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                    t.message?.let { it1 -> Log.e("error", it1) }
+            val loginRequest = LoginRequest();
+            loginRequest.setUserName(binding.editTextTextEmailAddress.text.toString())
+            loginRequest.setPassword(binding.editTextTextPassword.text.toString())
+
+            testService.getLogin(loginRequest).enqueue(object : Callback<LoginResponse> {
+                override fun onResponse(
+                    call: Call<LoginResponse>,
+                    response: Response<LoginResponse>
+                ) {
+                    val loginResponse = response.body()?.getData()
+                    if (loginResponse != null && loginResponse.isSuccess()) {
+                        binding.editTextTextEmailAddress.setText(loginResponse.getFirstName())
+                        binding.editTextTextPassword.setText(loginResponse.getLocation())
+                    }
                 }
 
-                override fun onResponse(
-                    call: Call<ResponseBody>,
-                    response: Response<ResponseBody>
-                ) {
-                    val testing = response.body()?.string()
-                    binding.editTextTextEmailAddress.setText(testing)
-                    val string = "test"
+                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                    t.message?.let { it1 -> Log.e("error", it1) }
                 }
             });
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
