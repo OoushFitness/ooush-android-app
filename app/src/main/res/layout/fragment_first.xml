@@ -51,7 +51,7 @@
             android:layout_width="243dp"
             android:layout_height="50dp"
             android:fontFamily="@font/montserrat_light"
-            android:textColor="@color/ooush_highlight_text"
+            android:textColor="@drawable/button_text_color"
             android:textSize="15sp"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"

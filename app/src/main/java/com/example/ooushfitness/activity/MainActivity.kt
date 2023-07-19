@@ -10,11 +10,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.ooushfitness.R
+import com.example.ooushfitness.constants.OoushConstants
 import com.example.ooushfitness.databinding.ActivityMainBinding
-import com.example.ooushfitness.http.LoginService
-import com.example.ooushfitness.http.TestService
-import com.example.ooushfitness.http.retrofit.RetrofitBuilder
-import retrofit2.Retrofit
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        applicationContext.getSharedPreferences(OoushConstants.PREF_NAME, MODE_PRIVATE)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

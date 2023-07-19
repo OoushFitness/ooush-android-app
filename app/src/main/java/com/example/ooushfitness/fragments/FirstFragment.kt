@@ -1,5 +1,8 @@
 package com.example.ooushfitness.fragments
 
+import android.content.Context
+import android.content.SharedPreferences
+import android.content.SharedPreferences.Editor
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,10 +11,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.ooushfitness.R
+import com.example.ooushfitness.constants.OoushConstants
 import com.example.ooushfitness.databinding.FragmentFirstBinding
 import com.example.ooushfitness.dto.request.LoginRequest
 import com.example.ooushfitness.dto.response.LoginResponse
-import com.example.ooushfitness.http.TestService
+import com.example.ooushfitness.http.service.AuthService
 import com.example.ooushfitness.http.retrofit.RetrofitBuilder
 import com.google.gson.Gson
 import retrofit2.Call
@@ -25,7 +29,7 @@ import java.util.concurrent.TimeUnit
  */
 class FirstFragment : Fragment() {
 
-    private lateinit var testService: TestService
+    private lateinit var authService: AuthService
 
     private var _binding: FragmentFirstBinding? = null
     private var retrofitBuilder : RetrofitBuilder = RetrofitBuilder()
@@ -37,7 +41,7 @@ class FirstFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
 
-        testService = retrofitBuilder.getService(TestService::class.java) as TestService
+        authService = retrofitBuilder.getService(AuthService::class.java, context) as AuthService
 
         return binding.root
     }
@@ -59,7 +63,7 @@ class FirstFragment : Fragment() {
         val loginRequest = LoginRequest();
         loginRequest.setUserName(binding.editTextTextEmailAddress.text.toString())
         loginRequest.setPassword(binding.editTextTextPassword.text.toString())
-        testService.getLogin(loginRequest).enqueue(object : Callback<LoginResponse> {
+        authService.login(loginRequest).enqueue(object : Callback<LoginResponse> {
             override fun onResponse(
                 call: Call<LoginResponse>,
                 response: Response<LoginResponse>
@@ -85,6 +89,7 @@ class FirstFragment : Fragment() {
     private fun processLoginResponse(loginResponse: LoginResponse.LoginResponseData?) {
         if (loginResponse != null) {
             if (loginResponse.isSuccess()) {
+                persistLoginToken(loginResponse)
                 findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
             } else {
                 binding.loginText.text = loginResponse.getLoginMessage()
@@ -93,5 +98,12 @@ class FirstFragment : Fragment() {
                 }, 7, TimeUnit.SECONDS)
             }
         }
+    }
+
+    private fun persistLoginToken(loginResponse: LoginResponse.LoginResponseData) {
+        val sharedPreferences: SharedPreferences? = activity?.getSharedPreferences(OoushConstants.PREF_NAME, Context.MODE_PRIVATE)
+        val editor: Editor? = sharedPreferences?.edit()
+        editor?.putString("token", loginResponse.getToken())
+        editor?.apply()
     }
 }
