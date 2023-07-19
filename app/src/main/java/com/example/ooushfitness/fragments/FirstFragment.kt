@@ -91,6 +91,7 @@ class FirstFragment : Fragment() {
         if (loginResponse != null) {
             if (loginResponse.isSuccess()) {
                 SessionUtils.storeData(activity, "token", loginResponse.getToken())
+                SessionUtils.storeData(activity, "authenticated", true)
                 findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
             } else {
                 binding.loginText.text = loginResponse.getLoginMessage()

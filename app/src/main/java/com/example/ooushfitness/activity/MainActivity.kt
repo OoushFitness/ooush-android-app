@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.ooushfitness.R
 import com.example.ooushfitness.constants.OoushConstants
 import com.example.ooushfitness.databinding.ActivityMainBinding
+import com.example.ooushfitness.storage.SessionUtils
 
 class MainActivity : AppCompatActivity() {
 
