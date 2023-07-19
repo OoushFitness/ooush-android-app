@@ -59,6 +59,19 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="404dp" />
 
+    <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="148dp" />
+
     <Button
             android:id="@+id/button_login"
             android:layout_width="243dp"

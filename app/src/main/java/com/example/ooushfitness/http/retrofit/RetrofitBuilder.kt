@@ -57,7 +57,7 @@ class RetrofitBuilder {
 
         val retrofit: Retrofit = Retrofit.Builder()
             .client(client)
-            .baseUrl("http://858c-193-178-55-60.ngrok-free.app")
+            .baseUrl("https://6464-185-108-171-197.ngrok-free.app")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
