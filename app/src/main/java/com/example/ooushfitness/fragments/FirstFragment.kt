@@ -1,5 +1,7 @@
 package com.example.ooushfitness.fragments
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -29,7 +31,6 @@ import java.util.concurrent.TimeUnit
 class FirstFragment : Fragment() {
 
     private lateinit var authService: AuthService
-    private lateinit var spinner: ProgressBar
 
     private var _binding: FragmentFirstBinding? = null
     private var retrofitBuilder : RetrofitBuilder = RetrofitBuilder()

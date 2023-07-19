@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        SessionUtils.clearSession(this)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -40,6 +40,9 @@ class MainActivity : AppCompatActivity() {
         if (SessionUtils.userAuthenticated(this)) {
             // Inflate the menu; this adds items to the action bar if it is present.
             menuInflater.inflate(R.menu.menu_main, menu)
+            supportActionBar?.setHomeButtonEnabled(false)
+            supportActionBar?.setDisplayShowHomeEnabled(false)
+            supportActionBar?.setDisplayHomeAsUpEnabled(false)
         }
         return true
     }

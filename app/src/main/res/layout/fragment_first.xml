@@ -60,10 +60,10 @@
             android:layout_marginBottom="404dp" />
 
     <ProgressBar
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="72dp"
+            android:layout_height="69dp"
             android:id="@+id/progressBar"
+            android:indeterminateTint="@color/ooush_primary"
             android:progressDrawable="@drawable/circular_progress_bar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
