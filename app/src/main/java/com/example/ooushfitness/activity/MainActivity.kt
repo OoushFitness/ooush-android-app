@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root);
+        setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
 
@@ -37,8 +37,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
+        if (SessionUtils.userAuthenticated(this)) {
+            // Inflate the menu; this adds items to the action bar if it is present.
+            menuInflater.inflate(R.menu.menu_main, menu)
+        }
         return true
     }
 

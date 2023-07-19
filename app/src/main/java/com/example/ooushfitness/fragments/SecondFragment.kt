@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
@@ -37,9 +39,15 @@ class SecondFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
-
+        setHasOptionsMenu(true);
         authService = retrofitBuilder.getService(AuthService::class.java, context) as AuthService
         return binding.root
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        // TODO Add your menu entries here
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -67,6 +75,6 @@ class SecondFragment : Fragment() {
             override fun onFailure(call: Call<LogoutResponse>, t: Throwable) {
                 t.message?.let { it1 -> Log.e("error", it1) }
             }
-        });
+        })
     }
 }
