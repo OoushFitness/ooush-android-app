@@ -16,6 +16,7 @@ import com.example.ooushfitness.dto.response.LoginResponse
 import com.example.ooushfitness.dto.response.LogoutResponse
 import com.example.ooushfitness.http.retrofit.RetrofitBuilder
 import com.example.ooushfitness.http.service.AuthService
+import com.example.ooushfitness.storage.SessionUtils
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,7 +39,6 @@ class SecondFragment : Fragment() {
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
 
         authService = retrofitBuilder.getService(AuthService::class.java, context) as AuthService
-
         return binding.root
     }
 
@@ -60,6 +60,7 @@ class SecondFragment : Fragment() {
                 call: Call<LogoutResponse>,
                 response: Response<LogoutResponse>
             ) {
+                SessionUtils.clearSession(activity)
                 findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
             }
 

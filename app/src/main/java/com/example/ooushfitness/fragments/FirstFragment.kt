@@ -17,6 +17,7 @@ import com.example.ooushfitness.dto.request.LoginRequest
 import com.example.ooushfitness.dto.response.LoginResponse
 import com.example.ooushfitness.http.service.AuthService
 import com.example.ooushfitness.http.retrofit.RetrofitBuilder
+import com.example.ooushfitness.storage.SessionUtils
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
@@ -89,7 +90,7 @@ class FirstFragment : Fragment() {
     private fun processLoginResponse(loginResponse: LoginResponse.LoginResponseData?) {
         if (loginResponse != null) {
             if (loginResponse.isSuccess()) {
-                persistLoginToken(loginResponse)
+                SessionUtils.storeData(activity, "token", loginResponse.getToken())
                 findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
             } else {
                 binding.loginText.text = loginResponse.getLoginMessage()
@@ -98,12 +99,5 @@ class FirstFragment : Fragment() {
                 }, 7, TimeUnit.SECONDS)
             }
         }
-    }
-
-    private fun persistLoginToken(loginResponse: LoginResponse.LoginResponseData) {
-        val sharedPreferences: SharedPreferences? = activity?.getSharedPreferences(OoushConstants.PREF_NAME, Context.MODE_PRIVATE)
-        val editor: Editor? = sharedPreferences?.edit()
-        editor?.putString("token", loginResponse.getToken())
-        editor?.apply()
     }
 }
