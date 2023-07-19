@@ -15,4 +15,5 @@
     <string name="logo_content_description">Ooush fitness logotype</string>
     <string name="enter_password">Enter Password</string>
     <string name="enter_username">Enter Username</string>
+    <string name="connection_error">"An error occurred, check your internet connection"</string>
 </resources>

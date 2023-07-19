@@ -80,12 +80,17 @@ class FirstFragment : Fragment() {
     }
 
     private fun retrieveLoginResponseData(response: Response<LoginResponse>): LoginResponse.LoginResponseData? {
-        val loginResponseData: LoginResponse.LoginResponseData? = if (response.isSuccessful) {
-            response.body()?.getData()
+        return if (response.code() == 404) {
+            binding.loginText.text = getString(R.string.connection_error)
+            null
         } else {
-            Gson().fromJson(response.errorBody()?.charStream(), LoginResponse::class.java).getData()
+            val loginResponseData: LoginResponse.LoginResponseData? = if (response.isSuccessful) {
+                response.body()?.getData()
+            } else {
+                Gson().fromJson(response.errorBody()?.charStream(), LoginResponse::class.java).getData()
+            }
+            loginResponseData
         }
-        return loginResponseData
     }
 
     private fun processLoginResponse(loginResponse: LoginResponse.LoginResponseData?) {
@@ -102,6 +107,9 @@ class FirstFragment : Fragment() {
                 }, 7, TimeUnit.SECONDS)
             }
         }
+        Executors.newSingleThreadScheduledExecutor().schedule({
+            binding.loginText.text = null
+        }, 7, TimeUnit.SECONDS)
         binding.progressBar.visibility = View.INVISIBLE
     }
 }
