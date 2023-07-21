@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.FirstFragment">
+        tools:context=".fragments.LoginFragment">
 
     <EditText
             android:layout_width="350dp"
@@ -88,7 +88,7 @@
             app:layout_constraintHorizontal_bias="0.5" />
 
     <Button
-            android:id="@+id/button_register"
+            android:id="@+id/button_sign_up"
             android:layout_width="243dp"
             android:layout_height="67dp"
             android:text="@string/signup"

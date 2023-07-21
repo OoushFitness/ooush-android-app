@@ -1,17 +1,14 @@
 package com.example.ooushfitness.fragments
 
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.ooushfitness.R
-import com.example.ooushfitness.databinding.FragmentFirstBinding
+import com.example.ooushfitness.databinding.FragmentLoginBinding
 import com.example.ooushfitness.dto.request.LoginRequest
 import com.example.ooushfitness.dto.response.LoginResponse
 import com.example.ooushfitness.http.retrofit.RetrofitBuilder
@@ -26,13 +23,13 @@ import java.util.concurrent.TimeUnit
 
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * A simple [Fragment] subclass as the login location in the navigation.
  */
-class FirstFragment : Fragment() {
+class LoginFragment : Fragment() {
 
     private lateinit var authService: AuthService
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentLoginBinding? = null
     private var retrofitBuilder : RetrofitBuilder = RetrofitBuilder()
 
     // This property is only valid between onCreateView and
@@ -41,7 +38,7 @@ class FirstFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         authService = retrofitBuilder.getService(AuthService::class.java, context) as AuthService
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding.progressBar.visibility = View.INVISIBLE
 
         return binding.root
@@ -51,6 +48,10 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonLogin.setOnClickListener {
             processLogin()
+        }
+        binding.buttonSignUp.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
+            findNavController().navigate(R.id.action_LoginFragment_to_SignupFragment)
         }
     }
 
@@ -98,7 +99,7 @@ class FirstFragment : Fragment() {
             if (loginResponse.isSuccess()) {
                 SessionUtils.storeData(activity, "token", loginResponse.getToken())
                 SessionUtils.storeData(activity, "authenticated", true)
-                findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+                findNavController().navigate(R.id.action_LoginFragment_to_DashboardFragment)
             } else {
                 binding.loginText.text = loginResponse.getLoginMessage()
                 binding.progressBar.visibility = View.INVISIBLE
