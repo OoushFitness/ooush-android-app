@@ -77,7 +77,7 @@ class LoginFragment : Fragment() {
                 binding.progressBar.visibility = View.INVISIBLE
                 t.message?.let { it1 -> Log.e("error", it1) }
             }
-        });
+        })
     }
 
     private fun retrieveLoginResponseData(response: Response<LoginResponse>): LoginResponse.LoginResponseData? {
