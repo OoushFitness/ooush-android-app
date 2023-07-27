@@ -9,6 +9,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.ooushfitness.R
 import com.example.ooushfitness.databinding.FragmentDashboardBinding
@@ -16,6 +17,7 @@ import com.example.ooushfitness.dto.response.LogoutResponse
 import com.example.ooushfitness.http.retrofit.RetrofitBuilder
 import com.example.ooushfitness.http.service.AuthService
 import com.example.ooushfitness.storage.SessionUtils
+import com.example.ooushfitness.storage.SharedViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,6 +28,7 @@ import retrofit2.Response
 class DashboardFragment : Fragment() {
 
     private lateinit var authService: AuthService
+    private lateinit var model: SharedViewModel
 
     private var _binding: FragmentDashboardBinding? = null
     private var retrofitBuilder : RetrofitBuilder = RetrofitBuilder()
@@ -39,6 +42,11 @@ class DashboardFragment : Fragment() {
         setHasOptionsMenu(true);
         authService = retrofitBuilder.getService(AuthService::class.java, context) as AuthService
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        model = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
+        super.onViewCreated(view, savedInstanceState)
     }
 
     @Deprecated("Deprecated in Java")
@@ -66,6 +74,7 @@ class DashboardFragment : Fragment() {
                 call: Call<LogoutResponse>,
                 response: Response<LogoutResponse>
             ) {
+                model.sendMessage("")
                 SessionUtils.clearSession(activity)
                 findNavController().navigate(R.id.action_DashboardFragment_to_LoginFragment)
             }

@@ -51,7 +51,7 @@ class SignupFragment : Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+        model = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
         binding.buttonSignUp.setOnClickListener {
             processRegisterUser()
         }

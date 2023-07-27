@@ -104,8 +104,8 @@
 
     <TextView
             android:id="@+id/register_user_text"
-            android:layout_width="248dp"
-            android:layout_height="95dp"
+            android:layout_width="385dp"
+            android:layout_height="67dp"
             android:fontFamily="@font/montserrat_light"
             android:textColor="@drawable/button_text_color"
             android:textSize="15sp"
@@ -113,7 +113,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="136dp"
-            app:layout_constraintHorizontal_bias="0.505" />
+            android:layout_marginBottom="644dp"
+            app:layout_constraintHorizontal_bias="0.652" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
