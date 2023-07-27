@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.ooushfitness.R
 import com.example.ooushfitness.databinding.FragmentLoginBinding
@@ -14,6 +16,7 @@ import com.example.ooushfitness.dto.response.LoginResponse
 import com.example.ooushfitness.http.retrofit.RetrofitBuilder
 import com.example.ooushfitness.http.service.AuthService
 import com.example.ooushfitness.storage.SessionUtils
+import com.example.ooushfitness.storage.SharedViewModel
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
@@ -52,6 +55,10 @@ class LoginFragment : Fragment() {
         binding.buttonSignUp.setOnClickListener {
             binding.progressBar.visibility = View.VISIBLE
             findNavController().navigate(R.id.action_LoginFragment_to_SignupFragment)
+        }
+        val model = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
+        model.message.observe(viewLifecycleOwner) {
+            binding.registerUserText.text = it
         }
     }
 

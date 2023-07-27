@@ -8,15 +8,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.ooushfitness.R
 import com.example.ooushfitness.databinding.FragmentSignupBinding
 import com.example.ooushfitness.dto.request.RegisterUserRequest
-import com.example.ooushfitness.dto.response.LoginResponse
 import com.example.ooushfitness.dto.response.RegisterUserResponse
 import com.example.ooushfitness.http.retrofit.RetrofitBuilder
 import com.example.ooushfitness.http.service.UserService
+import com.example.ooushfitness.storage.SharedViewModel
 import com.example.ooushfitness.utils.OoushUtils
-import com.google.gson.Gson
+import com.google.gson.internal.LinkedTreeMap
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,6 +33,7 @@ import java.util.concurrent.TimeUnit
 class SignupFragment : Fragment()  {
 
     private lateinit var userService: UserService
+    private lateinit var model: SharedViewModel
 
     private var _binding: FragmentSignupBinding? = null
     private var retrofitBuilder : RetrofitBuilder = RetrofitBuilder()
@@ -47,6 +51,7 @@ class SignupFragment : Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         binding.buttonSignUp.setOnClickListener {
             processRegisterUser()
         }
@@ -79,15 +84,10 @@ class SignupFragment : Fragment()  {
     private fun processRegisterUser() {
         binding.progressBar.visibility = View.VISIBLE
         binding.buttonSignUp.visibility = View.INVISIBLE
-        val registerUserRequest = createRegisterUserRequest()
-        userService.registerUser(registerUserRequest).enqueue(object : Callback<RegisterUserResponse> {
-            override fun onResponse(
-                call: Call<RegisterUserResponse>,
-                response: Response<RegisterUserResponse>
-            ) {
+        userService.registerUser(createRegisterUserRequest()).enqueue(object : Callback<RegisterUserResponse> {
+            override fun onResponse(call: Call<RegisterUserResponse>, response: Response<RegisterUserResponse>) {
                 retrieveRegisterUserResponseData(response)
             }
-
             override fun onFailure(call: Call<RegisterUserResponse>, t: Throwable) {
                 binding.progressBar.visibility = View.INVISIBLE
                 t.message?.let { it1 -> Log.e("error", it1) }
@@ -106,26 +106,29 @@ class SignupFragment : Fragment()  {
         return registerUserRequest
     }
 
-    private fun retrieveRegisterUserResponseData(response: Response<RegisterUserResponse>): String? {
-        return if (response.code() == 404) {
+    private fun retrieveRegisterUserResponseData(response: Response<RegisterUserResponse>) {
+        if (response.code() == 404) {
             binding.progressBar.visibility = View.INVISIBLE
             binding.buttonSignUp.visibility = View.VISIBLE
             binding.registerText.text = getString(R.string.connection_error)
             Executors.newSingleThreadScheduledExecutor().schedule({
                 binding.registerText.text = null
             }, 7, TimeUnit.SECONDS)
-            null
         } else if (response.isSuccessful) {
             binding.progressBar.visibility = View.INVISIBLE
-            return response.body()?.getData()
+
+            @Suppress("UNCHECKED_CAST")
+            val responseMap: LinkedTreeMap<String, String> =
+                response.body()?.getData() as LinkedTreeMap<String, String>
+            responseMap["body"]?.let { model.sendMessage(it) }
+            findNavController().navigate(R.id.action_SignupFragment_to_LoginFragment)
         } else {
             binding.progressBar.visibility = View.INVISIBLE
             binding.buttonSignUp.visibility = View.VISIBLE
-            binding.registerText.text = "Not successful"
+            binding.registerText.text = getString(R.string.not_successful)
             Executors.newSingleThreadScheduledExecutor().schedule({
                 binding.registerText.text = null
             }, 7, TimeUnit.SECONDS)
-            return "Not successful"
         }
     }
 

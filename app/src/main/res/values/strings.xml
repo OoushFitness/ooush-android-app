@@ -30,4 +30,5 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="passwords_dont_match_warning">Passwords do not match</string>
+    <string name="not_successful">Not successful</string>
 </resources>
