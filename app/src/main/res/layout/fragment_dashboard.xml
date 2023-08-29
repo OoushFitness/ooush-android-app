@@ -7,14 +7,17 @@
         android:layout_height="match_parent"
         tools:context=".fragments.DashboardFragment">
 
-    <TextView
-            android:id="@+id/textview_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+    <ProgressBar
+            android:layout_width="72dp"
+            android:layout_height="69dp"
+            android:id="@+id/progressBar"
+            android:indeterminateTint="@color/ooush_primary"
+            android:progressDrawable="@drawable/circular_progress_bar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-    />
+            app:layout_constraintHorizontal_bias="0.498"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="384dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

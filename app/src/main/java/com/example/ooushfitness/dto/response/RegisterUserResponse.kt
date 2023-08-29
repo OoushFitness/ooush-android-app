@@ -17,7 +17,4 @@ class RegisterUserResponse {
         return this.data;
     }
 
-    fun getSize(): Int? {
-        return this.size;
-    }
 }

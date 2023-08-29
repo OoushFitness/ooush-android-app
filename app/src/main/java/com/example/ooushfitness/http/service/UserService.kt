@@ -10,4 +10,5 @@ public interface UserService {
 
     @POST("users/registerUser")
     fun registerUser(@Body registerUserRequest: RegisterUserRequest): Call<RegisterUserResponse>
+
 }

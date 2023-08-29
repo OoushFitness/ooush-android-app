@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.ooushfitness.R
@@ -85,7 +84,10 @@ class SignupFragment : Fragment()  {
         binding.progressBar.visibility = View.VISIBLE
         binding.buttonSignUp.visibility = View.INVISIBLE
         userService.registerUser(createRegisterUserRequest()).enqueue(object : Callback<RegisterUserResponse> {
-            override fun onResponse(call: Call<RegisterUserResponse>, response: Response<RegisterUserResponse>) {
+            override fun onResponse(
+                call: Call<RegisterUserResponse>,
+                response: Response<RegisterUserResponse>
+            ) {
                 retrieveRegisterUserResponseData(response)
             }
             override fun onFailure(call: Call<RegisterUserResponse>, t: Throwable) {
@@ -111,9 +113,11 @@ class SignupFragment : Fragment()  {
             binding.progressBar.visibility = View.INVISIBLE
             binding.buttonSignUp.visibility = View.VISIBLE
             binding.registerText.text = getString(R.string.connection_error)
+
             Executors.newSingleThreadScheduledExecutor().schedule({
                 binding.registerText.text = null
             }, 7, TimeUnit.SECONDS)
+
         } else if (response.isSuccessful) {
             binding.progressBar.visibility = View.INVISIBLE
 
@@ -121,11 +125,13 @@ class SignupFragment : Fragment()  {
             val responseMap: LinkedTreeMap<String, String> =
                 response.body()?.getData() as LinkedTreeMap<String, String>
             responseMap["body"]?.let { model.sendMessage(it) }
+
             findNavController().navigate(R.id.action_SignupFragment_to_LoginFragment)
         } else {
             binding.progressBar.visibility = View.INVISIBLE
             binding.buttonSignUp.visibility = View.VISIBLE
             binding.registerText.text = getString(R.string.not_successful)
+
             Executors.newSingleThreadScheduledExecutor().schedule({
                 binding.registerText.text = null
             }, 7, TimeUnit.SECONDS)
